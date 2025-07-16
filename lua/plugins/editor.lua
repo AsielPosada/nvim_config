@@ -18,4 +18,22 @@ return {
     event = 'VimEnter',
     dependencies = { 'nvim-lua/plenary.nvim' },
   },
+  {
+    'Dan7h3x/neaterm.nvim',
+    branch = 'stable',
+    event = 'VeryLazy',
+    opts = {
+      keymaps = {
+        toggle = '<leader>pp',
+        close = '<leader>px',
+        new_vertical = '<leader>pv',
+        new_horizontal = '<leader>ph',
+        new_float = '<leader>pf',
+      },
+    },
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'ibhagwan/fzf-lua',
+    },
+  },
 }
