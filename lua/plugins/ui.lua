@@ -69,8 +69,9 @@ return {
   },
   {
     'folke/which-key.nvim',
-    event = 'VimEnter',
+    event = 'VeryLazy',
     opts = {
+      preset = 'helix',
       delay = 0,
       icons = {
         mappings = vim.g.have_nerd_font,
@@ -84,12 +85,9 @@ return {
     },
   },
   {
-    'Sly-Harvey/radium.nvim',
-    name = 'radium',
-    priority = 1000,
+    'felipeagc/fleet-theme-nvim',
     config = function()
-      require('radium').setup {}
-      vim.cmd.colorscheme 'radium'
+      vim.cmd 'colorscheme fleet'
     end,
   },
 }
